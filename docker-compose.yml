@@ -1,6 +1,6 @@
 services:
 
-  mosquitto:
+  mqtt:
     container_name: mosquitto
     build:
       context: ./infra/mosquitto
