@@ -2,10 +2,11 @@ services:
 
   mqtt:
     container_name: mosquitto
-    build:
-      context: ./infra/mosquitto
+    image: eclipse-mosquitto
     volumes:
-      - ./infra/mosquitto:/mosquitto/
+      - ./infra/mosquitto/config:/mosquitto/config
+      - ./infra/mosquitto/data:/mosquitto/data
+      - ./infra/mosquitto/log:/mosquitto/log
     ports:
       - "1883:1883"
       - "9001:9001"
