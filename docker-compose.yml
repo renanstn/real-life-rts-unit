@@ -1,7 +1,7 @@
 services:
 
   mqtt:
-    container_name: mosquitto
+    container_name: mqtt
     image: eclipse-mosquitto
     volumes:
       - ./infra/mosquitto/config:/mosquitto/config
