@@ -8,7 +8,7 @@
 - [ ] Programar app para identificar o robô
 - [ ] Programar app para disparar comandos para o robô via MQTT
 
-## Notas de desenvolvimento
+## Desenvolvimento
 
 ### Mosquitto
 
