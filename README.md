@@ -12,7 +12,7 @@
 
 ### Mosquitto
 
-Resolver problema da falta de permissão para ler o arquivo de log:
+Se deixar que o mosquitto crie o arquivo de `log` dentro do Docker, vai ficar dando erro de permissão toda hora ao tentar visualizá-lo. Para evitar isso:
 
 ```sh
 cd log
