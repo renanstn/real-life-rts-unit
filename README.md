@@ -28,6 +28,13 @@ docker-compose run --rm mqtt sh
 mosquitto_pub -h 192.168.15.8 -p 1883 -t "test" -m 1
 ```
 
+testando `sub`
+
+```
+docker-compose run --rm mqtt sh
+mosquitto_sub -h 192.168.15.8 -p 1883 -t "test"
+```
+
 ## Referências
 
 - Porque MQTT?: https://medium.com/mqtt-buddy/mqtt-vs-http-which-one-is-the-best-for-iot-c868169b3105
