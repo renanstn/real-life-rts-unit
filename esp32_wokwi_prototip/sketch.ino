@@ -25,8 +25,9 @@ void mqttCallback(char* topic, byte* payload, unsigned int length) {
   Serial.println();
   Serial.print("Message:");
   for (int i = 0; i < length; i++) {
-      Serial.print((char) payload[i]);
+    Serial.print((char) payload[i]);
   }
+  Serial.println();
 }
 
 void setupMQTT() {
@@ -57,9 +58,10 @@ void setup() {
 
 void loop() {
   if (!client.connected()) {
+    Serial.println("MQTT capotou!");
     setupMQTT();
   }
-  Serial.print(".");
-  client.publish("test", "oieeee");
+  client.loop();
+  client.publish("test", "hello from virtual ESP32");
   delay(2000);
 }
