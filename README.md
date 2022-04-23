@@ -6,7 +6,7 @@
 - [ ] Programar ESP32 para receber instruções e executá-las
 - [ ] Programar app para receber e tratar a imagem da webcam
 - [ ] Programar app para identificar o robô
-- [ ] Programar app para disparar comandos para o robô via MQTT
+- [x] Programar app para disparar comandos para o robô via MQTT
 
 ## Desenvolvimento
 
