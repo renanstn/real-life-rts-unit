@@ -35,6 +35,14 @@ docker-compose run --rm mqtt sh
 mosquitto_sub -h 192.168.15.8 -p 1883 -t "test"
 ```
 
+### Python app
+
+Formatar código com `black`:
+
+```
+black .
+```
+
 ## Referências
 
 - Porque MQTT?: https://medium.com/mqtt-buddy/mqtt-vs-http-which-one-is-the-best-for-iot-c868169b3105
