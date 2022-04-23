@@ -3,14 +3,10 @@ import paho.mqtt.client as mqtt
 import settings
 
 
-def on_connect(client, userdata, flags, rc):
-    print("Connected with result code " + str(rc))
-    client.subscribe(settings.MQTT_TOPIC)
-    client.publish(settings.MQTT_TOPIC, "hello from python app")
+def mqtt_publish_message(topic: str, message: str):
+    client = mqtt.Client("python_app")
+    client.connect(settings.MQTT_SERVER_URL, settings.MQTT_SERVER_PORT, 60)
+    client.publish(topic, message)
 
-client = mqtt.Client("python_app")
-client.on_connect = on_connect
 
-client.connect(settings.MQTT_SERVER_URL, settings.MQTT_SERVER_PORT, 60)
-
-client.publish("test", "hello from python app")
+mqtt_publish_message("test", "hello from python app")
