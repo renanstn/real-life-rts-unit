@@ -1,12 +1,16 @@
-import paho.mqtt.client as mqtt
+import cv2
 
 import settings
+import opencv_utils
 
 
-def mqtt_publish_message(topic: str, message: str):
-    client = mqtt.Client("python_app")
-    client.connect(settings.MQTT_SERVER_URL, settings.MQTT_SERVER_PORT, 60)
-    client.publish(topic, message)
+capture = cv2.VideoCapture(settings.WEBCAM_URL)
 
+while True:
+    success, image = capture.read()
 
-mqtt_publish_message("test", "hello from python app")
+    # Show image results
+    image_stack = opencv_utils.stack_images(1, ([image]))
+    cv2.imshow("Press 'Q' to exit", image_stack)
+    if cv2.waitKey(1) & 0xFF == ord("q"):
+        break
