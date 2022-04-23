@@ -40,7 +40,7 @@ mosquitto_sub -h 192.168.15.8 -p 1883 -t "test"
 Formatar código com `black`:
 
 ```
-black .
+docker-compose run --rm app black .
 ```
 
 ## Referências
