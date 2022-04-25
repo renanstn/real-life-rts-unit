@@ -5,7 +5,9 @@
 - [x] Setup mosquitto (MQTT server)
 - [ ] Programar ESP32 para receber instruções e executá-las
 - [ ] Programar app para receber e tratar a imagem da webcam
-- [ ] Programar app para identificar o robô
+- [ ] Programar app para identificar o robô e sua direção
+  - [ ] Usando a imagem de um objeto semicircular e [este](https://stackoverflow.com/questions/59363937/opencv-detecting-an-object-and-its-rotation) método?
+  - [ ] Usando 2 ou 3 imagens para identificação e deduzir o ângulo entre elas?
 - [x] Programar app para disparar comandos para o robô via MQTT
 
 ## Desenvolvimento
